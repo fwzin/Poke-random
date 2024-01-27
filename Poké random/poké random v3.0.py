@@ -2,9 +2,9 @@ import random
 import tkinter as tk
 from tkinter import messagebox
 
-# Dicionário com os Pokémon e suas respectivas rotas em Fire Red
+# pokédex dos Pokémon e rotas em Fire Red
 pokemons_rotas_fire_red = {
-        "Bulbasaur": "Um dos pokémons iniciais",
+    "Bulbasaur": "Um dos pokémons iniciais",
     "Venusaur": "Evolui do Ivysaur no level 32",
     "Charmander": "Um dos pokémons iniciais",
     "Charmeleon": "Evolui do Charmander no level 16",
@@ -307,7 +307,7 @@ pokemons_rotas_leaf_green = {
     "Mewtwo": "Encontre no final da caverna Unknown Dungeon, a noroeste de Cerulean City depois de vencer a Elite Four"
 }
 
-# Função para criar um time aleatório
+# Função time aleatório
 def criar_time(incluir_inicial, rotas):
     time = []
 
@@ -323,7 +323,7 @@ def criar_time(incluir_inicial, rotas):
 
     return time
 
-# Função chamada quando o botão é pressionado
+# Função do botão
 def on_button_click():
     version_choice = version_var.get()
 
@@ -340,11 +340,11 @@ def on_button_click():
 
     result_text.set("Seu time Pokémon aleatório é:\n" + "\n".join(f"{pokemon} - Encontrado em: {rotas.get(pokemon, 'Desconhecido')}" for pokemon in time_aleatorio))
 
-# Criar a janela principal
+# Criar a janela
 root = tk.Tk()
 root.title("Pokémon Time Aleatório")
 
-# Variáveis de controle
+# Variáveis
 version_var = tk.IntVar()
 incluir_inicial_var = tk.BooleanVar()
 result_text = tk.StringVar()
@@ -367,5 +367,5 @@ checkbutton_incluir_inicial.grid(row=3, column=0, columnspan=2)
 button_generate_team.grid(row=4, column=0, columnspan=2)
 label_result.grid(row=5, column=0, columnspan=2)
 
-# Iniciar o loop da interface gráfica
+# Iniciar o loop
 root.mainloop()
